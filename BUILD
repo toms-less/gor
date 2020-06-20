@@ -9,7 +9,10 @@ load("//:build/workspace.bzl", "RELEASE_VERSION")
 pkg_tar(
     name = "gor-" + RELEASE_VERSION,
     extension = "tar.gz",
-    srcs = [":gor"],
+    srcs = [
+        ":gor",
+        "build/data/config.yaml",
+    ],
     mode = "0755",
 )
 

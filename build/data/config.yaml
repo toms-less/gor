@@ -1,0 +1,4 @@
+# Runtime server configuration.
+---
+server:
+  port: 6666
