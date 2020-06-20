@@ -1,6 +1,7 @@
 package(default_visibility = ["//visibility:public"])
 
 load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+load("@io_bazel_rules_go//proto:def.bzl", "go_proto_library")
 load("@bazel_tools//tools/build_defs/pkg:pkg.bzl", "pkg_tar")
 load("//:build/workspace.bzl", "RELEASE_VERSION")
 
@@ -60,7 +61,6 @@ proto_library(
     srcs = ["build/protos/runtime.proto"],
     deps = ["@com_google_protobuf//:any_proto"],
 )
-
 
 go_proto_library(
     name = "runtime_grpc",
